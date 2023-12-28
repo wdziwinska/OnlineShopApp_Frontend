@@ -1,5 +1,6 @@
 package com.example.onlineshopapp_frontend.ui.transform
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshopapp_frontend.R
 import com.example.onlineshopapp_frontend.databinding.FragmentTransformBinding
 import com.example.onlineshopapp_frontend.databinding.ItemTransformBinding
+import com.example.onlineshopapp_frontend.ui.ItemDetailActivity
 
 /**
  * Fragment that demonstrates a responsive layout pattern where the format of the content
@@ -92,6 +94,12 @@ class TransformFragment : Fragment() {
             holder.imageView.setImageDrawable(
                 ResourcesCompat.getDrawable(holder.imageView.resources, drawables[position], null)
             )
+            holder.itemView.setOnClickListener {
+                val item = getItem(position)
+                val intent = Intent(holder.itemView.context, ItemDetailActivity::class.java)
+                intent.putExtra("item", item)
+                holder.itemView.context.startActivity(intent)
+            }
         }
     }
 

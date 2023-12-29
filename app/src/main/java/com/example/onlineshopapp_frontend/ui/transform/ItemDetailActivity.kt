@@ -33,6 +33,9 @@ class ItemDetailActivity : AppCompatActivity() {
         "Grill Gazowy FireMaster Deluxe: Nowoczesny grill gazowy z zaawansowanymi funkcjami regulacji temperatury, doskonały do grillowania na świeżym powietrzu.",
         "Konsola do gier QuantumPlay X: Zaawansowana konsola do gier z bogatą biblioteką gier, idealna dla pasjonatów rozrywki wideo."
     )
+    lateinit var price: String
+    lateinit var name: String
+    var imageId: Int = 0
 
     @SuppressLint("MissingInflatedId", "SetTextI18n", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,11 +50,11 @@ class ItemDetailActivity : AppCompatActivity() {
         val itemImageView = findViewById<ImageView>(R.id.itemImageView)
         val priceTextView = findViewById<TextView>(R.id.priceTextView)
 
-        val name = intent.getStringExtra("name")
+        name = intent.getStringExtra("name").toString()
         val description = intent.getStringExtra("description")
-        val imageId = intent.getIntExtra("image", 0)
+        imageId = intent.getIntExtra("image", 0)
         val position = intent.getIntExtra("position", 0)
-        val price = intent.getStringExtra("price")
+        price = intent.getStringExtra("price").toString()
 
         // Populate views with item details
         nameTextView.text = name
@@ -64,9 +67,10 @@ class ItemDetailActivity : AppCompatActivity() {
         super.onStart()
 
         binding.buttonBuyNow.setOnClickListener {
-            val item = "34"
             val intent = Intent(binding.buttonBuyNow.context, BuyNowActivity::class.java)
-            intent.putExtra("price", item)
+            intent.putExtra("name", name)
+            intent.putExtra("price", price)
+            intent.putExtra("imageId", imageId)
             binding.buttonBuyNow.context.startActivity(intent)
         }
     }

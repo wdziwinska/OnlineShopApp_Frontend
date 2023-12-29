@@ -19,10 +19,16 @@ class ItemDetailActivity : AppCompatActivity() {
         // Find the views
         val nameTextView = findViewById<TextView>(R.id.nameTextView)
         val descriptionTextView = findViewById<TextView>(R.id.descriptionTextView)
+//        val itemImageView = findViewById<TextView>(R.id.itemImageView)
+
+        val name = intent.getStringExtra("name")
+        val description = intent.getStringExtra("description")
+//        val image = intent.getIntArrayExtra("image")
 
         // Populate views with item details
-        nameTextView.text = "Name Example 1"
-        descriptionTextView.text = "Name description Example 1"
+        nameTextView.text = name
+        descriptionTextView.text = description
+//        itemImageView.text = image.toString()
     }
 
 }

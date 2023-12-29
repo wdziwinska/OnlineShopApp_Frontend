@@ -90,14 +90,16 @@ class TransformFragment : Fragment() {
         }
 
         override fun onBindViewHolder(holder: TransformViewHolder, position: Int) {
-            holder.textView.text = getItem(position)
+            holder.nameView.text = getItem(position)
             holder.imageView.setImageDrawable(
                 ResourcesCompat.getDrawable(holder.imageView.resources, drawables[position], null)
             )
             holder.itemView.setOnClickListener {
                 val item = getItem(position)
                 val intent = Intent(holder.itemView.context, ItemDetailActivity::class.java)
-                intent.putExtra("item", item)
+                intent.putExtra("name", item)
+                intent.putExtra("description", item)
+//                intent.putExtra("image", drawables[position])
                 holder.itemView.context.startActivity(intent)
             }
         }
@@ -107,6 +109,6 @@ class TransformFragment : Fragment() {
         RecyclerView.ViewHolder(binding.root) {
 
         val imageView: ImageView = binding.imageViewItemTransform
-        val textView: TextView = binding.textViewItemTransform
+        val nameView: TextView = binding.textViewItemTransform
     }
 }

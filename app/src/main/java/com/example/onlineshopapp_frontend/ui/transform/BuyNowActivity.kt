@@ -12,14 +12,15 @@ import com.example.onlineshopapp_frontend.R
 
 class BuyNowActivity : AppCompatActivity()
 {
+    private lateinit var priceTextView: TextView
+    private lateinit var nameProductTextView: TextView
+    private lateinit var imageView: ImageView
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_now)
 
-        val priceTextView = findViewById<TextView>(R.id.priceTextView)
-        val nameProductTextView = findViewById<TextView>(R.id.productNameTextView)
-        val imageView = findViewById<ImageView>(R.id.itemImageView)
+        findViews()
 
         val price = intent.getStringExtra("price")
         val name = intent.getStringExtra("name")
@@ -39,6 +40,16 @@ class BuyNowActivity : AppCompatActivity()
     override fun onStart() {
         super.onStart()
 
+        setupRadioGroup()
+    }
+
+    private fun findViews() {
+        priceTextView = findViewById(R.id.priceTextView)
+        nameProductTextView = findViewById(R.id.productNameTextView)
+        imageView = findViewById<ImageView>(R.id.itemImageView)
+    }
+
+    private fun setupRadioGroup() {
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
         val nameAddressFields = findViewById<LinearLayout>(R.id.addressTextInputLayout)
         val namePointFields = findViewById<LinearLayout>(R.id.namePointTextInputLayout)
@@ -53,7 +64,6 @@ class BuyNowActivity : AppCompatActivity()
                 nameAddressFields.visibility = View.GONE
                 namePointFields.visibility = View.VISIBLE
             }
-
         }
     }
 }

@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshopapp_frontend.R
 import com.example.onlineshopapp_frontend.databinding.FragmentTransformBinding
 import com.example.onlineshopapp_frontend.databinding.ItemTransformBinding
-import com.example.onlineshopapp_frontend.ui.ItemDetailActivity
 
 /**
  * Fragment that demonstrates a responsive layout pattern where the format of the content

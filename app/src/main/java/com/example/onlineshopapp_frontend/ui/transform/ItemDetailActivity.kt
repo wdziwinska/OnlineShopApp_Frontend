@@ -1,13 +1,19 @@
-package com.example.onlineshopapp_frontend.ui
+package com.example.onlineshopapp_frontend.ui.transform
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import com.example.onlineshopapp_frontend.R
+import com.example.onlineshopapp_frontend.databinding.ActivityItemDetailBinding
+import com.example.onlineshopapp_frontend.ui.transform.TransformFragment
 
 class ItemDetailActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityItemDetailBinding
 
     private val descriptions = listOf(
         "description1",
@@ -32,9 +38,8 @@ class ItemDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_detail)
-
-        // Get the item from the intent extra
-        val item = intent.getStringExtra("item")
+        binding = ActivityItemDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Find the views
         val nameTextView = findViewById<TextView>(R.id.nameTextView)
@@ -52,4 +57,14 @@ class ItemDetailActivity : AppCompatActivity() {
         itemImageView.setImageResource(imageId)
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        binding.buttonBuyNow.setOnClickListener {
+            val item = "34"
+            val intent = Intent(binding.buttonBuyNow.context, BuyNowActivity::class.java)
+            intent.putExtra("price", item)
+            binding.buttonBuyNow.context.startActivity(intent)
+        }
+    }
 }

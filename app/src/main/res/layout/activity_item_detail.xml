@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.ItemDetailActivity">
+    tools:context=".ui.transform.ItemDetailActivity">
 
     <ImageView
         android:id="@+id/itemImageView"
@@ -31,5 +31,16 @@
         app:layout_constraintTop_toBottomOf="@id/itemImageView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="Item description" />
+
+    <Button
+        android:id="@+id/buttonBuyNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kup teraz"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/descriptionTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

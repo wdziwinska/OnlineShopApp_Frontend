@@ -15,6 +15,13 @@ class BuyNowActivity : AppCompatActivity()
     private lateinit var priceTextView: TextView
     private lateinit var nameProductTextView: TextView
     private lateinit var imageView: ImageView
+    private lateinit var name: String
+    private lateinit var price: String
+    var imageId: Int = 0
+    private lateinit var namePointFields: LinearLayout
+    private lateinit var nameAddressFields: LinearLayout
+    private lateinit var radioGroup: RadioGroup
+
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,16 +29,9 @@ class BuyNowActivity : AppCompatActivity()
 
         findViews()
 
-        val price = intent.getStringExtra("price")
-        val name = intent.getStringExtra("name")
-        val imageId = intent.getIntExtra("image", 0)
-
         imageView.setImageResource(R.drawable.avatar_16)
         priceTextView.text = price
         nameProductTextView.text = name
-
-        val namePointFields = findViewById<LinearLayout>(R.id.namePointTextInputLayout)
-        val nameAddressFields = findViewById<LinearLayout>(R.id.addressTextInputLayout)
 
         namePointFields.visibility = View.GONE
         nameAddressFields.visibility = View.GONE
@@ -46,13 +46,21 @@ class BuyNowActivity : AppCompatActivity()
     private fun findViews() {
         priceTextView = findViewById(R.id.priceTextView)
         nameProductTextView = findViewById(R.id.productNameTextView)
-        imageView = findViewById<ImageView>(R.id.itemImageView)
+        imageView = findViewById(R.id.itemImageView)
+
+        price = intent.getStringExtra("price").toString()
+        name = intent.getStringExtra("name").toString()
+        imageId = intent.getIntExtra("image", 0)
+
+        namePointFields = findViewById(R.id.namePointTextInputLayout)
+        nameAddressFields = findViewById(R.id.addressTextInputLayout)
+        radioGroup = findViewById(R.id.radioGroup)
+
     }
 
     private fun setupRadioGroup() {
-        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
-        val nameAddressFields = findViewById<LinearLayout>(R.id.addressTextInputLayout)
-        val namePointFields = findViewById<LinearLayout>(R.id.namePointTextInputLayout)
+
+        findViews()
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
 

@@ -2,7 +2,10 @@ package com.example.onlineshopapp_frontend.ui.transform
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.onlineshopapp_frontend.R
@@ -25,5 +28,32 @@ class BuyNowActivity : AppCompatActivity()
         imageView.setImageResource(R.drawable.avatar_16)
         priceTextView.text = price
         nameProductTextView.text = name
+
+        val namePointFields = findViewById<LinearLayout>(R.id.namePointTextInputLayout)
+        val nameAddressFields = findViewById<LinearLayout>(R.id.addressTextInputLayout)
+
+        namePointFields.visibility = View.GONE
+        nameAddressFields.visibility = View.GONE
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
+        val nameAddressFields = findViewById<LinearLayout>(R.id.addressTextInputLayout)
+        val namePointFields = findViewById<LinearLayout>(R.id.namePointTextInputLayout)
+
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+
+            if(checkedId == R.id.radioButton1) {
+                nameAddressFields.visibility = View.VISIBLE
+                namePointFields.visibility = View.GONE
+            }
+            else if(checkedId == R.id.radioButton2) {
+                nameAddressFields.visibility = View.GONE
+                namePointFields.visibility = View.VISIBLE
+            }
+
+        }
     }
 }

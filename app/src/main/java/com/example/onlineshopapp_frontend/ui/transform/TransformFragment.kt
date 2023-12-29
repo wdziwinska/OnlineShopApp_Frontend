@@ -99,7 +99,7 @@ class TransformFragment : Fragment() {
                 val intent = Intent(holder.itemView.context, ItemDetailActivity::class.java)
                 intent.putExtra("name", item)
                 intent.putExtra("description", item)
-//                intent.putExtra("image", drawables[position])
+                intent.putExtra("image", drawables[position])
                 holder.itemView.context.startActivity(intent)
             }
         }

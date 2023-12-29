@@ -120,6 +120,7 @@ class TransformFragment : Fragment() {
                 intent.putExtra("description", item)
                 intent.putExtra("image", drawables[position])
                 intent.putExtra("position", position)
+                intent.putExtra("price", prices[position])
                 holder.itemView.context.startActivity(intent)
             }
         }

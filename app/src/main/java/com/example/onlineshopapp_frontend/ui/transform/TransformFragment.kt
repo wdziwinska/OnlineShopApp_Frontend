@@ -83,6 +83,25 @@ class TransformFragment : Fragment() {
             R.drawable.avatar_16,
         )
 
+        private val prices = listOf(
+            "$10",
+            "$20",
+            "$30",
+            "$40",
+            "$50",
+            "$60",
+            "$70",
+            "$80",
+            "$90",
+            "$100",
+            "$110",
+            "$120",
+            "$130",
+            "$140",
+            "$150",
+            "$160",
+        )
+
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransformViewHolder {
             val binding = ItemTransformBinding.inflate(LayoutInflater.from(parent.context))
             return TransformViewHolder(binding)
@@ -93,6 +112,7 @@ class TransformFragment : Fragment() {
             holder.imageView.setImageDrawable(
                 ResourcesCompat.getDrawable(holder.imageView.resources, drawables[position], null)
             )
+            holder.priceView.text = prices[position]
             holder.itemView.setOnClickListener {
                 val item = getItem(position)
                 val intent = Intent(holder.itemView.context, ItemDetailActivity::class.java)
@@ -110,5 +130,6 @@ class TransformFragment : Fragment() {
 
         val imageView: ImageView = binding.imageViewItemTransform
         val nameView: TextView = binding.textViewItemTransform
+        val priceView: TextView = binding.priceTextViewTransform!!
     }
 }

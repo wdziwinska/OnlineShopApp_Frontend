@@ -25,4 +25,17 @@
         app:layout_constraintStart_toEndOf="@id/image_view_item_transform"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="This is item # xx" />
+
+    <TextView
+        android:id="@+id/price_text_view_transform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_view_item_transform"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Price: $xx" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,17 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Item Name" />
 
+    <CheckBox
+        android:id="@+id/cbFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|right"
+        android:button="@drawable/selector_wishlist_item"
+        app:layout_constraintBottom_toTopOf="@+id/priceTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        app:useMaterialThemeColors="false" />
+
     <TextView
         android:id="@+id/priceTextView"
         android:layout_width="match_parent"

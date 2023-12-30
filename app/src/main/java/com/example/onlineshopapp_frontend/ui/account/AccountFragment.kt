@@ -1,4 +1,4 @@
-package com.example.onlineshopapp_frontend.ui.slideshow
+package com.example.onlineshopapp_frontend.ui.account
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.onlineshopapp_frontend.databinding.FragmentSlideshowBinding
+import com.example.onlineshopapp_frontend.databinding.FragmentAccountBinding
 
-class SlideshowFragment : Fragment() {
+class AccountFragment : Fragment() {
 
-    private var _binding: FragmentSlideshowBinding? = null
+    private var _binding: FragmentAccountBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class SlideshowFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+        val accountViewModel =
+            ViewModelProvider(this).get(AccountViewModel::class.java)
 
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        _binding = FragmentAccountBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textAccount
+        accountViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

@@ -1,5 +1,6 @@
 package com.example.onlineshopapp_frontend
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -13,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import com.example.onlineshopapp_frontend.databinding.ActivityMainBinding
+import com.example.onlineshopapp_frontend.ui.account.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.fab?.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+        }
+
+        binding.appBarMain.loginImageButton?.setOnClickListener {
+            val intent = Intent(binding.appBarMain.loginImageButton!!.context, RegisterActivity::class.java)
+            binding.appBarMain.fab!!.context.startActivity(intent)
         }
 
         val navHostFragment =

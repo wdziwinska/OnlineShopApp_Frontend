@@ -25,8 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.transform.ItemDetailActivity" />
-        <activity android:name=".ui.transform.BuyNowActivity" />
+        <activity android:name=".ui.main_page.ItemDetailActivity" />
+        <activity android:name=".ui.main_page.BuyNowActivity" />
     </application>
 
 </manifest>

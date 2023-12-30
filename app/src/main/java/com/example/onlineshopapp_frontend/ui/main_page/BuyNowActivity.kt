@@ -1,4 +1,4 @@
-package com.example.onlineshopapp_frontend.ui.transform
+package com.example.onlineshopapp_frontend.ui.main_page
 
 import android.annotation.SuppressLint
 import android.os.Bundle

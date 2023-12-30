@@ -1,4 +1,4 @@
-package com.example.onlineshopapp_frontend.ui.transform
+package com.example.onlineshopapp_frontend.ui.main_page
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,10 +6,8 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import com.example.onlineshopapp_frontend.R
 import com.example.onlineshopapp_frontend.databinding.ActivityItemDetailBinding
-import com.example.onlineshopapp_frontend.ui.transform.TransformFragment
 
 class ItemDetailActivity : AppCompatActivity() {
 

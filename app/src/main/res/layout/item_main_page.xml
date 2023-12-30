@@ -6,12 +6,12 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/image_view_item_transform"
+        android:id="@+id/image_view_item_main_page"
         android:layout_width="@dimen/item_transform_image_length"
         android:layout_height="@dimen/item_transform_image_length"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:contentDescription="@string/image_view_item_transform_content_description"
+        android:contentDescription="@string/image_view_item_main_page_content_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,25 +25,25 @@
         app:layout_constraintGuide_percent="0.56107054" />
 
     <TextView
-        android:id="@+id/text_view_item_transform"
+        android:id="@+id/text_view_item_main_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:gravity="top"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
-        app:layout_constraintStart_toEndOf="@id/image_view_item_transform"
+        app:layout_constraintStart_toEndOf="@id/image_view_item_main_page"
         app:layout_constraintVertical_bias="0.381"
         tools:text="This is item # xx" />
 
     <TextView
-        android:id="@+id/price_text_view_transform"
+        android:id="@+id/price_text_view_main_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_view_item_transform"
+        app:layout_constraintStart_toEndOf="@+id/image_view_item_main_page"
         app:layout_constraintTop_toBottomOf="@+id/horizontalGuideline"
         app:layout_constraintVertical_bias="0.0"
         tools:text="Price: $xx" />

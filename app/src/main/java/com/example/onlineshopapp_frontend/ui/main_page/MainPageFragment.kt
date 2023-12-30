@@ -1,4 +1,4 @@
-package com.example.onlineshopapp_frontend.ui.transform
+package com.example.onlineshopapp_frontend.ui.main_page
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshopapp_frontend.R
-import com.example.onlineshopapp_frontend.databinding.FragmentTransformBinding
-import com.example.onlineshopapp_frontend.databinding.ItemTransformBinding
+import com.example.onlineshopapp_frontend.databinding.FragmentMainPageBinding
+import com.example.onlineshopapp_frontend.databinding.ItemMainPageBinding
 
 /**
  * Fragment that demonstrates a responsive layout pattern where the format of the content
@@ -23,9 +23,9 @@ import com.example.onlineshopapp_frontend.databinding.ItemTransformBinding
  * the [RecyclerView] using LinearLayoutManager in a small screen
  * and shows items using GridLayoutManager in a large screen.
  */
-class TransformFragment : Fragment() {
+class MainPageFragment : Fragment() {
 
-    private var _binding: FragmentTransformBinding? = null
+    private var _binding: FragmentMainPageBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -36,14 +36,14 @@ class TransformFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val transformViewModel = ViewModelProvider(this).get(TransformViewModel::class.java)
-        _binding = FragmentTransformBinding.inflate(inflater, container, false)
+        val mainPageViewModel = ViewModelProvider(this).get(MainPageViewModel::class.java)
+        _binding = FragmentMainPageBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val recyclerView = binding.recyclerviewTransform
-        val adapter = TransformAdapter()
+        val recyclerView = binding.recyclerviewMainPage
+        val adapter = MainPageAdapter()
         recyclerView.adapter = adapter
-        transformViewModel.texts.observe(viewLifecycleOwner) {
+        mainPageViewModel.texts.observe(viewLifecycleOwner) {
             adapter.submitList(it)
         }
         return root
@@ -54,8 +54,8 @@ class TransformFragment : Fragment() {
         _binding = null
     }
 
-    class TransformAdapter :
-        ListAdapter<String, TransformViewHolder>(object : DiffUtil.ItemCallback<String>() {
+    class MainPageAdapter :
+        ListAdapter<String, MainPageViewHolder>(object : DiffUtil.ItemCallback<String>() {
 
             override fun areItemsTheSame(oldItem: String, newItem: String): Boolean =
                 oldItem == newItem
@@ -102,12 +102,12 @@ class TransformFragment : Fragment() {
             "$160",
         )
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransformViewHolder {
-            val binding = ItemTransformBinding.inflate(LayoutInflater.from(parent.context))
-            return TransformViewHolder(binding)
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainPageViewHolder {
+            val binding = ItemMainPageBinding.inflate(LayoutInflater.from(parent.context))
+            return MainPageViewHolder(binding)
         }
 
-        override fun onBindViewHolder(holder: TransformViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: MainPageViewHolder, position: Int) {
             holder.nameView.text = getItem(position)
             holder.imageView.setImageDrawable(
                 ResourcesCompat.getDrawable(holder.imageView.resources, drawables[position], null)
@@ -126,11 +126,11 @@ class TransformFragment : Fragment() {
         }
     }
 
-    class TransformViewHolder(binding: ItemTransformBinding) :
+    class MainPageViewHolder(binding: ItemMainPageBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        val imageView: ImageView = binding.imageViewItemTransform
-        val nameView: TextView = binding.textViewItemTransform
-        val priceView: TextView = binding.priceTextViewTransform!!
+        val imageView: ImageView = binding.imageViewItemMainPage
+        val nameView: TextView = binding.textViewItemMainPage
+        val priceView: TextView = binding.priceTextViewMainPage!!
     }
 }

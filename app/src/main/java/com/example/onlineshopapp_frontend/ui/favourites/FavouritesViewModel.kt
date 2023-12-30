@@ -1,13 +1,13 @@
-package com.example.onlineshopapp_frontend.ui.reflow
+package com.example.onlineshopapp_frontend.ui.favourites
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ReflowViewModel : ViewModel() {
+class FavouritesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is reflow Fragment"
+        value = "This is favourites Fragment"
     }
     val text: LiveData<String> = _text
 }

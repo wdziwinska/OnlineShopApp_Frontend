@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_transform">
+    app:startDestination="@+id/nav_main_page">
 
     <fragment
-        android:id="@+id/nav_transform"
+        android:id="@+id/nav_main_page"
         android:name="com.example.onlineshopapp_frontend.ui.transform.TransformFragment"
-        android:label="@string/menu_transform"
+        android:label="@string/menu_main_page"
         tools:layout="@layout/fragment_transform" />
 
     <fragment
-        android:id="@+id/nav_reflow"
-        android:name="com.example.onlineshopapp_frontend.ui.reflow.ReflowFragment"
-        android:label="@string/menu_reflow"
-        tools:layout="@layout/fragment_reflow" />
+        android:id="@+id/nav_favourites"
+        android:name="com.example.onlineshopapp_frontend.ui.favourites.FavouritesFragment"
+        android:label="@string/menu_favourites"
+        tools:layout="@layout/fragment_favourites" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_account"
         android:name="com.example.onlineshopapp_frontend.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_account"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment

@@ -1,5 +1,7 @@
 package com.example.onlineshopapp_frontend.ui.account
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Patterns
 import android.view.KeyEvent
@@ -139,7 +141,15 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, View.OnFocus
                             mBinding.passwordTextInputLayout.isErrorEnabled = false
                         }
                     } else {
-                        validationPassword()
+                        if(validationPassword() && mBinding.confirmPasswordTextInputEdit.text!!.isNotEmpty() && validationConfirmPassword() && validationPassowrdAndConfirmPassword()){
+                            if(mBinding.confirmPasswordTextInputLayout.isErrorEnabled){
+                                mBinding.confirmPasswordTextInputLayout.isErrorEnabled = false
+                            }
+                            mBinding.confirmPasswordTextInputLayout.apply {
+                                setStartIconDrawable(R.drawable.ic_check_circle_24)
+                                setStartIconTintList(ColorStateList.valueOf(Color.GREEN))
+                            }
+                        }
                     }
                 }
                 R.id.confirmPasswordTextInputEdit -> {
@@ -148,7 +158,15 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener, View.OnFocus
                             mBinding.confirmPasswordTextInputLayout.isErrorEnabled = false
                         }
                     } else {
-                        validationConfirmPassword()
+                        if(validationConfirmPassword() && validationPassword() && validationPassowrdAndConfirmPassword()){
+                            if(mBinding.passwordTextInputLayout.isErrorEnabled){
+                                mBinding.passwordTextInputLayout.isErrorEnabled = false
+                            }
+                            mBinding.confirmPasswordTextInputLayout.apply {
+                                setStartIconDrawable(R.drawable.ic_check_circle_24)
+                                setStartIconTintList(ColorStateList.valueOf(Color.GREEN))
+                            }
+                        }
                     }
                 }
             }

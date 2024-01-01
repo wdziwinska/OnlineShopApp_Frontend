@@ -6,6 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".ui.account.AccountFragment">
 
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.utils.widget.MotionLabel
+            android:id="@+id/personalDataMotionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Twoje dane osobowe"
+            android:textAlignment="center"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="15dp"
+            android:text="Imię i nazwisko:"/>
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+
+            android:text="Full Name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            android:text="Adres e-mail:"/>
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-mail address"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/text_account"
         android:layout_width="match_parent"

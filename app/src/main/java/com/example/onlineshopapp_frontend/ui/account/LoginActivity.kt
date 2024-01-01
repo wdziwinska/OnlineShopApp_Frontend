@@ -1,5 +1,6 @@
 package com.example.onlineshopapp_frontend.ui.account
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.KeyEvent
@@ -17,12 +18,22 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, View.OnFocusCha
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityLoginBinding.inflate(LayoutInflater.from(this))
-        setContentView(mBinding.root)
         mBinding.emailTextInputEditText.onFocusChangeListener = this
         mBinding.passwordTextInputEditText.onFocusChangeListener = this
+        mBinding.passwordTextInputEditText.setOnKeyListener(this)
+        mBinding.loginButton.onFocusChangeListener = this
+        mBinding.loginWithGoogleButton.onFocusChangeListener = this
+        mBinding.registerButton.onFocusChangeListener = this
+
+        mBinding.registerButton.setOnClickListener {
+            val intent = Intent(mBinding.registerButton.context, RegisterActivity::class.java)
+            mBinding.registerButton.context.startActivity(intent)
+        }
+
+        setContentView(mBinding.root)
     }
 
-    private fun validationLogin(): Boolean {
+    private fun validationEmail(): Boolean {
         var errorMessage: String? = null
         val value: String = mBinding.emailTextInputEditText.text.toString()
 
@@ -57,7 +68,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, View.OnFocusCha
         }
         return errorMessage == null
     }
-    override fun onClick(p0: View?) {
+    override fun onClick(view: View?) {
+        // TODO
     }
 
     override fun onFocusChange(view: View?, hasFocus: Boolean) {
@@ -69,7 +81,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, View.OnFocusCha
                             mBinding.emailTextInputLayout.isErrorEnabled = false
                         }
                     } else {
-                        validationLogin()
+                        validationEmail()
                     }
                 }
                 R.id.passwordTextInputEditText -> {

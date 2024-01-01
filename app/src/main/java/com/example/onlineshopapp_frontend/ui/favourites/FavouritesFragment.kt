@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.onlineshopapp_frontend.R
 import com.example.onlineshopapp_frontend.databinding.FragmentFavouritesBinding
 
 class FavouritesFragment : Fragment() {
@@ -27,6 +29,11 @@ class FavouritesFragment : Fragment() {
 
         _binding = FragmentFavouritesBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val checkBox = view?.findViewById<CheckBox>(R.id.cbFav)
+        if (checkBox != null) {
+            checkBox.isChecked = true
+        }
 
         val textView: TextView = binding.textFavourites
         favouritesViewModel.text.observe(viewLifecycleOwner) {

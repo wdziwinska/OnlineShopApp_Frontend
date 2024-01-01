@@ -1,4 +1,4 @@
-package com.example.onlineshopapp_frontend.ui.account
+package com.example.onlineshopapp_frontend.ui.authentication.view
 
 import android.content.Intent
 import android.os.Bundle

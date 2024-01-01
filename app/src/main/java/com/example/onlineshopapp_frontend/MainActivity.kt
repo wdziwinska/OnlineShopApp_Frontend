@@ -14,8 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import com.example.onlineshopapp_frontend.databinding.ActivityMainBinding
-import com.example.onlineshopapp_frontend.ui.account.LoginActivity
-import com.example.onlineshopapp_frontend.ui.account.RegisterActivity
+import com.example.onlineshopapp_frontend.ui.authentication.view.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 

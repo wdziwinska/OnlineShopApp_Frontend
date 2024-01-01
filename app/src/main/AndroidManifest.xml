@@ -27,8 +27,8 @@
         </activity>
         <activity android:name=".ui.main_page.ItemDetailActivity" />
         <activity android:name=".ui.main_page.BuyNowActivity" />
-        <activity android:name=".ui.account.RegisterActivity" />
-        <activity android:name=".ui.account.LoginActivity" />
+        <activity android:name=".ui.authentication.view.RegisterActivity" />
+        <activity android:name=".ui.authentication.view.LoginActivity" />
     </application>
 
 </manifest>

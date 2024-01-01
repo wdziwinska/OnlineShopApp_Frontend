@@ -22,4 +22,10 @@
     <string name="image_view_item_main_page_content_description">Represents an image view in the
         item
     </string>
+    <string name="password">PASSWORD</string>
+    <string name="login_with_google">LOGIN WITH GOOGLE</string>
+    <string name="if_you_are_a_new_user_click">IF YOU ARE A NEW USER CLICK</string>
+    <string name="register">REGISTER</string>
+    <string name="login">LOGIN</string>
+    <string name="email">EMAIL</string>
 </resources>

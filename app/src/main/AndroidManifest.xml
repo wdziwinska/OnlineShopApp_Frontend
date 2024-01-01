@@ -28,6 +28,7 @@
         <activity android:name=".ui.main_page.ItemDetailActivity" />
         <activity android:name=".ui.main_page.BuyNowActivity" />
         <activity android:name=".ui.account.RegisterActivity" />
+        <activity android:name=".ui.account.LoginActivity" />
     </application>
 
 </manifest>

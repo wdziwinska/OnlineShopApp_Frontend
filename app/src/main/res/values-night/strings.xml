@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password">PASSWORD</string>
+    <string name="login_with_google">LOGIN WITH GOOGLE</string>
+    <string name="if_you_are_a_new_user_click">IF YOU ARE A NEW USER CLICK</string>
+    <string name="register">REGISTER</string>
+    <string name="login">LOGIN</string>
+    <string name="email">EMAIL</string>
+</resources>

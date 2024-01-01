@@ -14,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import com.example.onlineshopapp_frontend.databinding.ActivityMainBinding
+import com.example.onlineshopapp_frontend.ui.account.LoginActivity
 import com.example.onlineshopapp_frontend.ui.account.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
@@ -32,8 +33,13 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
 
-        binding.appBarMain.loginImageButton?.setOnClickListener {
+/*        binding.appBarMain.loginImageButton?.setOnClickListener {
             val intent = Intent(binding.appBarMain.loginImageButton!!.context, RegisterActivity::class.java)
+            binding.appBarMain.fab!!.context.startActivity(intent)
+        }*/
+
+        binding.appBarMain.loginImageButton?.setOnClickListener {
+            val intent = Intent(binding.appBarMain.loginImageButton!!.context, LoginActivity::class.java)
             binding.appBarMain.fab!!.context.startActivity(intent)
         }
 

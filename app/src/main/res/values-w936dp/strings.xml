@@ -6,4 +6,9 @@
     <string name="register">REGISTER</string>
     <string name="login">LOGIN</string>
     <string name="email">EMAIL</string>
+    <string name="nazwa_produktu">Nazwa produktu</string>
+    <string name="opis_produktu">Opis produktu</string>
+    <string name="cena_produktu">Cena produktu</string>
+    <string name="dodaj">Dodaj</string>
+    <string name="wybierz_zdjecie">Wybierz zdjęcie</string>
 </resources>

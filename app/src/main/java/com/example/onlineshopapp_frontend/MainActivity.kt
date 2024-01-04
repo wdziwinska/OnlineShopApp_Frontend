@@ -15,6 +15,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import com.example.onlineshopapp_frontend.databinding.ActivityMainBinding
 import com.example.onlineshopapp_frontend.ui.authentication.view.LoginActivity
+import com.example.onlineshopapp_frontend.ui.main_page.AdminPanelActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +40,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.appBarMain.loginImageButton?.setOnClickListener {
             val intent = Intent(binding.appBarMain.loginImageButton!!.context, LoginActivity::class.java)
+            binding.appBarMain.fab!!.context.startActivity(intent)
+        }
+
+        binding.appBarMain.addNewProductImageButton?.setOnClickListener {
+            val intent = Intent(binding.appBarMain.addNewProductImageButton!!.context, AdminPanelActivity::class.java)
             binding.appBarMain.fab!!.context.startActivity(intent)
         }
 

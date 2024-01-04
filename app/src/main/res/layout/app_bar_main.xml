@@ -23,7 +23,17 @@
                 android:id="@+id/loginImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
                 android:src="@drawable/ic_login_24_black_24db"
+                android:background="@android:color/transparent"
+                android:layout_gravity="right" />
+
+            <ImageButton
+                android:id="@+id/addNewProductImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:src="@drawable/ic_add_circle_24dp"
                 android:background="@android:color/transparent"
                 android:layout_gravity="right" />
 

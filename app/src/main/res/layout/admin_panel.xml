@@ -41,13 +41,13 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/fullNameTextInputLayout"
+                    android:id="@+id/nameTextInputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/fullNameTextInputEditText"
+                        android:id="@+id/nameTextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/nazwa_produktu"
@@ -58,14 +58,14 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/emailTextInputLayout"
+                    android:id="@+id/descriptionTextInputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/emailTextInputEditText"
+                        android:id="@+id/descriptionTextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/opis_produktu"
@@ -79,14 +79,14 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/passwordTextInputLayout"
+                    android:id="@+id/priceTextInputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/passwordTextInputEditText"
+                        android:id="@+id/priceTextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/cena_produktu"
@@ -97,7 +97,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/confirmPasswordTextInputLayout"
+                    android:id="@+id/imageTextInputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

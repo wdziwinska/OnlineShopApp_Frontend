@@ -91,11 +91,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, View.OnFocusCha
                         }
                     } else {
                         validationPassword()
-                        }
                     }
                 }
             }
         }
+    }
 
     override fun onKey(view: View?, event: Int, keyEvent: KeyEvent?): Boolean {
         return false

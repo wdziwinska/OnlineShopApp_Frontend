@@ -22,7 +22,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, View.OnFocusCha
         mBinding.passwordTextInputEditText.onFocusChangeListener = this
         mBinding.passwordTextInputEditText.setOnKeyListener(this)
         mBinding.loginButton.onFocusChangeListener = this
-        mBinding.loginWithGoogleButton.onFocusChangeListener = this
         mBinding.registerButton.onFocusChangeListener = this
 
         mBinding.registerButton.setOnClickListener {

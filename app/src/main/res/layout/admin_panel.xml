@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,9 +51,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/nazwa_produktu"
+                        android:inputType="textMultiLine"
                         android:paddingHorizontal="8dp"
-                        android:paddingVertical="12dp"
-                        android:inputType="textMultiLine" />
+                        android:paddingVertical="12dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,19 +110,18 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="left|center"
+                        android:orientation="horizontal"
                         tools:ignore="RtlHardcoded">
 
                         <ImageButton
                             android:id="@+id/addImageButton"
-                            android:src="@drawable/ic_upload_file"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginStart="24dp"
                             android:background="@android:color/transparent"
-                            android:state_focused="true"
-                            android:contentDescription="Wybierz zdjęcie" />
+                            android:src="@drawable/ic_upload_file"
+                            android:state_focused="true" />
 
                         <ImageView
                             android:id="@+id/imageView"
@@ -132,16 +131,16 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:srcCompat="@tools:sample/avatars"
-                            android:contentDescription="TODO" />
+                            tools:srcCompat="@tools:sample/avatars" />
 
                     </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
                         android:layout_marginStart="10dp"
-                        android:text="@string/wybierz_zdjecie"/>
+                        android:text="@string/wybierz_zdjecie"
+                        android:textSize="16sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

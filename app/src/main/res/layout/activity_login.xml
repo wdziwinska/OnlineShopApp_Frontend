@@ -22,18 +22,18 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email_text_input_layout"
+                android:id="@+id/login_text_input_layout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailTextInputEditText"
+                    android:id="@+id/loginTextInputEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/email"
-                    android:inputType="textEmailAddress"
+                    android:hint="@string/login"
+                    android:inputType="text"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="12dp" />
 
